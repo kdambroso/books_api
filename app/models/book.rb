@@ -12,7 +12,8 @@ def self.all
                 "title" => result["title"],
                 "author" => result["author"],
                 "publisher" => result["publisher"],
-                "genre" => result["genre"]
+                "genre" => result["genre"], 
+                "image" => result["image"]
             }
         end 
     end 
@@ -24,7 +25,8 @@ def self.all
             "title" => results.first["title"],
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
-            "genre" => results.first["genre"]
+            "genre" => results.first["genre"], 
+            "image" => results.first["image"]
         }
     end 
 
@@ -32,8 +34,8 @@ def self.all
         results = DB.exec(
             <<-SQL
                 INSERT INTO books (title, author, publisher, genre)
-                VALUES ( '#{opts["title"]}', '#{opts["author"]}', '#{opts["publisher"]}', '#{opts["genre"]}' )
-                RETURNING id, title, author, publisher, genre;
+                VALUES ( '#{opts["title"]}', '#{opts["author"]}', '#{opts["publisher"]}', '#{opts["genre"]}', '#{opts["image"]}' )
+                RETURNING id, title, author, publisher, genre, image;
             SQL
         )
         return {
@@ -41,7 +43,9 @@ def self.all
             "title" => results.first["title"],
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
-            "genre" => results.first["genre"]
+            "genre" => results.first["genre"], 
+            "image" => results.first["image"]
+
         }
     end
 
@@ -54,9 +58,9 @@ def self.all
         results = DB.exec(
             <<-SQL
                 UPDATE books
-                SET title='#{opts["title"]}', author='#{opts["author"]}', publisher='#{opts["publisher"]}', genre='#{opts["genre"]}'
+                SET title='#{opts["title"]}', author='#{opts["author"]}', publisher='#{opts["publisher"]}', genre='#{opts["genre"]}', image='#{opts["image"]}'
                 WHERE id=#{id}
-                RETURNING id, title, author, publisher, genre;
+                RETURNING id, title, author, publisher, genre, image;
             SQL
         )
         return {
@@ -64,7 +68,8 @@ def self.all
             "title" => results.first["title"],
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
-            "genre" => results.first["genre"]
+            "genre" => results.first["genre"], 
+            "image" => results.first["image"]
         }
     end
 

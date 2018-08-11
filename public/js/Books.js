@@ -34,7 +34,7 @@ class Books extends React.Component {
     }
   })
   .then(createdBook => {
-    return createdPerson.json()
+    return createdBook.json()
   })
   .then(jsonedBook => {
     this.handleCreate(jsonedBook)

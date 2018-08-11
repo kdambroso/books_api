@@ -8,6 +8,7 @@
 
 CREATE TABLE books (id SERIAL, title TEXT, author TEXT, publisher TEXT, genre TEXT, image TEXT); 
 
+
 INSERT INTO books (title, author, publisher, genre, image) VALUES ('Lord of The Rings', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
 
 INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Hobbit', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
@@ -17,13 +18,11 @@ INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Silmaril
 
 
 
-5.times do 
+5.times do
     Book.create({
-        'title' => "#{Faker::Book.title}", 
-        'author' => "#{Faker::Book.author}", 
+        'title' => "#{Faker::Book.title}",
+        'author' => "#{Faker::Book.author}",
         'publisher' => "#{Faker::Book.publisher}"
         'genre' => "#{Faker::Book.genre}"
     })
-end 
-
- 
+end

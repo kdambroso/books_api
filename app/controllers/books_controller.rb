@@ -20,4 +20,4 @@ class BooksController < ApplicationController
     def update
         render json: Book.update(params["id"], params["book"])
     end 
-    
+end 

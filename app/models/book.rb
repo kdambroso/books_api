@@ -33,7 +33,7 @@ def self.all
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO books (title, author, publisher, genre)
+                INSERT INTO books (title, author, publisher, genre, image)
                 VALUES ( '#{opts["title"]}', '#{opts["author"]}', '#{opts["publisher"]}', '#{opts["genre"]}', '#{opts["image"]}' )
                 RETURNING id, title, author, publisher, genre, image;
             SQL

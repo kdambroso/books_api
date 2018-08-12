@@ -3,7 +3,7 @@ class BookForm extends React.Component {
       super(props)
       this.state = {
         title: '',
-        author: 0,
+        author: '',
         publisher: '',
         genre: '',
         image: ''
@@ -79,7 +79,7 @@ class BookForm extends React.Component {
             <div className='control'>
               <input
                 className='input'
-                type='image'
+                type='text'
                 id='image'
                 onChange={this.handleChange}
                 value={this.state.image}

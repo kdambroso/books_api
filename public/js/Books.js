@@ -41,7 +41,7 @@ class Books extends React.Component {
     this.toggleState('addBookAvailable',
      'booksAvailable')
   })
-  // .catch(error => console.log(error))
+  .catch(error => console.log(error))
 }
 handleUpdateSubmit(book) {
   fetch('/books/' + book.id,{
@@ -86,7 +86,7 @@ handleUpdateSubmit(book) {
           books: JSONdata
         })
       })
-      // .catch(error => console.log(error))
+      .catch(error => console.log(error))
   }
 
   getBook(book){

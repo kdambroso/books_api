@@ -2,7 +2,7 @@ class Books extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      booksAvailable: true,
+      booksListAvailable: true,
       addBookAvailable: false,
       bookAvailable: false,
       editBookAvailable: false,
@@ -10,11 +10,10 @@ class Books extends React.Component {
       book: {}
     }
       this.toggleState = this.toggleState.bind(this)
-      this.getBooks = this.getBooks.bind(this)
       this.getBook = this.getBook.bind(this)
-      this.deleteBook = this.deleteBook.bind(this)
       this.handleCreate = this.handleCreate.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
+      this.deleteBook = this.deleteBook.bind(this)
       this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
   }
   componentDidMount () {
@@ -39,7 +38,7 @@ class Books extends React.Component {
   .then(jsonedBook => {
     this.handleCreate(jsonedBook)
     this.toggleState('addBookAvailable',
-     'booksAvailable')
+     'booksListAvailable')
   })
   .catch(error => console.log(error))
 }
@@ -57,14 +56,14 @@ handleUpdateSubmit(book) {
   })
   .then(jsonedBook => {
     this.getBooks()
-    this.toggleState('booksAvailable',
+    this.toggleState('booksListAvailable',
      'bookAvailable')
   })
   .catch(error => console.log(error))
 }
 
   deleteBook(book, index) {
-    fetch('/books/' + book.id,
+    fetch('books/' + book.id,
   {
     method: 'DELETE'
   })
@@ -106,14 +105,14 @@ handleUpdateSubmit(book) {
   render () {
     console.log(this.state);
     return (
-      <div className='book column'>
+      <div className='books column'>
         <h2> Books </h2>
-
+{this.state.booksListAvailable ?
         <button
           className='button is-success'
-            onClick={()=>this.toggleState('addBookAvailable', 'booksAvailable')}
-              >Add a Book</button>
-        {this.state.booksAvailable
+            onClick={()=>this.toggleState('addBookAvailable', 'booksListAvailable')}
+              >Add a Book</button>:''}
+        {this.state.booksListAvailable
           ? <BooksList
           toggleState={this.toggleState}
           books={this.state.books}

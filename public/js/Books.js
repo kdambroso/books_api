@@ -14,7 +14,7 @@ class Books extends React.Component {
       this.getBook = this.getBook.bind(this)
       this.deleteBook = this.deleteBook.bind(this)
       this.handleCreate = this.handleCreate.bind(this)
-      this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
       this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
   }
   componentDidMount () {
@@ -24,7 +24,7 @@ class Books extends React.Component {
     console.log([book, ...this.state.books])
     this.setState({books:[book, ...this.state.books]})
   }
-  handleCreateSubmit (book) {
+  handleSubmit (book) {
   fetch('/books', {
     body: JSON.stringify(book),
     method: 'POST',
@@ -41,7 +41,7 @@ class Books extends React.Component {
     this.toggleState('addBookAvailable',
      'booksAvailable')
   })
-  .catch(error => console.log(error))
+  // .catch(error => console.log(error))
 }
 handleUpdateSubmit(book) {
   fetch('/books/' + book.id,{
@@ -85,7 +85,8 @@ handleUpdateSubmit(book) {
         this.setState({
           books: JSONdata
         })
-      }).catch(error => console.log(error))
+      })
+      // .catch(error => console.log(error))
   }
 
   getBook(book){
@@ -124,7 +125,7 @@ handleUpdateSubmit(book) {
           ? <BookForm
             toggleState={this.toggleState}
             handleCreate={this.handleCreate}
-            handleSubmit={this.handleCreateSubmit}
+            handleSubmit={this.handleSubmit}
           />
          : ''
        }

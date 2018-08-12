@@ -14,12 +14,12 @@ class BookForm extends React.Component {
     componentDidMount(){
       if(this.props.book){
         this.setState({
-          title: this.props.Book.title,
-          author: this.props.Book.author,
-          publisher: this.props.Book.publisher,
-          genre: this.props.Book.genre,
-          image: this.props.Book.image,
-          id: this.props.Book.id
+          title: this.props.book.title,
+          author: this.props.book.author,
+          publisher: this.props.book.publisher,
+          genre: this.props.book.genre,
+          image: this.props.book.image,
+          id: this.props.book.id
         })
       }
     }

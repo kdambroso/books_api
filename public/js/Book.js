@@ -6,22 +6,22 @@ class Book extends React.Component {
           <div className='tile is-ancestor'>
             <div className='tile is-2'>
               <div>
-                <img src={this.props.Book.image} alt={this.props.Book.name} />
+                <img src={this.props.book.image} alt={this.props.book.name} />
               </div>
             </div>
             <div className='tile is-2'></div>
             <div className='tile'>
               <div>
-                <h3 className='tile is-child box'><span>Title:</span> {this.props.Book.title} </h3>
-                <p className='tile is-child box'><span>Author:</span> {this.props.Book.author} </p>
-                <p className='tile is-child box'><span>Publisher:</span> {this.props.Book.publisher} </p>
-                <p className='tile is-child box'><span>Genre:</span>{this.props.Book.genre} </p>
+                <h3 className='tile is-child box'><span>Title:</span> {this.props.book.title} </h3>
+                <p className='tile is-child box'><span>Author:</span> {this.props.book.author} </p>
+                <p className='tile is-child box'><span>Publisher:</span> {this.props.book.publisher} </p>
+                <p className='tile is-child box'><span>Genre:</span>{this.props.book.genre} </p>
               </div>
 
               <div className='tile'>
               </div>
             <div className='tile'>
-              <button className='button is-warning' onClick={()=> this.props.toggleState('booksListAvailable', 'BookAvailable')}>See All Books</button>
+              <button className='button is-warning' onClick={()=> this.props.toggleState('booksListAvailable', 'bookAvailable')}>See All Books</button>
             </div>
             </div>
             </div>

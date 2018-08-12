@@ -14,19 +14,19 @@ class BookForm extends React.Component {
     componentDidMount(){
       if(this.props.book){
         this.setState({
-          title: this.props.book.title,
-          author: this.props.book.author,
-          publisher: this.props.book.publisher,
-          genre: this.props.book.genre,
-          image: this.props.book.image,
-          id: this.props.book.id
+          title: this.props.Book.title,
+          author: this.props.Book.author,
+          publisher: this.props.Book.publisher,
+          genre: this.props.Book.genre,
+          image: this.props.Book.image,
+          id: this.props.Book.id
         })
       }
     }
-  
+
     handleChange (event) {
       this.setState({[event.target.id]: event.target.value})
-  
+
     }
     handleSubmit (event) {
       event.preventDefault()
@@ -89,7 +89,7 @@ class BookForm extends React.Component {
               <input className='button is-primary' type='submit' />
             </div>
           </form>
-            <button className="button is-link" onClick={()=> this.props.toggleState('booksAvailable', 'addBookAvialbe')}>Cancel</button>
+            <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button>
         </div>
       )
     }

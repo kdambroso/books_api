@@ -7,9 +7,8 @@ class BooksList extends React.Component {
         {this.props.books.map((book, index) => {
           return (
           <tr>
-            <td  onClick={
-              () => {
-                this.props.toggleState('booksAvailable', 'bookAvailable');
+            <td onClick={() =>
+              { this.props.toggleState('booksListAvailable', 'bookAvailable');
                 this.props.getBook(book)
                 }}
                 >
@@ -24,7 +23,7 @@ class BooksList extends React.Component {
 
             <td onClick={
               () => {
-            this.props.toggleState('booksAvailable', 'bookAvailable');
+            this.props.toggleState('booksListAvailable', 'bookAvailable');
             this.props.getBook(book)
             }}
             >

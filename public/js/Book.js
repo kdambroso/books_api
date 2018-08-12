@@ -16,13 +16,12 @@ class Book extends React.Component {
                 <p className='tile is-child box'><span>Author:</span> {this.props.Book.author} </p>
                 <p className='tile is-child box'><span>Publisher:</span> {this.props.Book.publisher} </p>
                 <p className='tile is-child box'><span>Genre:</span>{this.props.Book.genre} </p>
-
-  
               </div>
+
               <div className='tile'>
               </div>
             <div className='tile'>
-              <button className='button is-warning' onClick={()=> this.props.toggleState('booksAvailable', 'BookIsVisible')}>See All Books</button>
+              <button className='button is-warning' onClick={()=> this.props.toggleState('booksListAvailable', 'BookAvailable')}>See All Books</button>
             </div>
             </div>
             </div>

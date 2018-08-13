@@ -12,10 +12,10 @@ class Book extends React.Component {
           <div className='tile is-2'></div>
           <div className='tile'>
             <div>
-              <h3 className='tile is-child box'><span>Name:</span> {this.props.book.title} </h3>
-              <p className='tile is-child box'><span>Phone:</span> {this.props.book.publisher} </p>
-              <p className='tile is-child box'><span>Key Skill:</span> {this.props.book.genre} </p>
-              <p className='tile is-child box'><span>Age:</span>{this.props.book.author} </p>
+              <h3 className='tile is-child box'><span>Title:</span> {this.props.book.title} </h3>
+              <p className='tile is-child box'><span>Publisher:</span> {this.props.book.publisher} </p>
+              <p className='tile is-child box'><span>Genre:</span> {this.props.book.genre} </p>
+              <p className='tile is-child box'><span>Author:</span>{this.props.book.author} </p>
 
             </div>
             <div className='tile'>

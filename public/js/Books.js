@@ -101,7 +101,7 @@ class Books extends React.Component {
 
 
 
-  toggleState (st1, st2) {
+  toggleState =(st1, st2) =>{
     this.setState({
       [st1]: !this.state[st1],
       [st2]: !this.state[st2]

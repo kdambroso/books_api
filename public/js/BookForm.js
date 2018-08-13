@@ -10,6 +10,7 @@ class BookForm extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.componentDidMount= this.componentDidMount.bind(this)
   }
 
   componentDidMount(){
@@ -34,6 +35,7 @@ class BookForm extends React.Component {
   }
 
   render () {
+    console.log(this);
     return (
       <div className='field'>
         <form onSubmit={this.handleSubmit}>
@@ -51,7 +53,7 @@ class BookForm extends React.Component {
           <div className='control'>
             <input
               className='input'
-              type='number'
+              type='text'
               onChange={this.handleChange}
               value={this.state.author}
               id='author'
@@ -70,7 +72,7 @@ class BookForm extends React.Component {
           <div className='control'>
             <input
               className='input'
-              type='tel'
+              type='text'
               id='publisher'
               onChange={this.handleChange}
               value={this.state.publisher}

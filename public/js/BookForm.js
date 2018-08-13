@@ -51,7 +51,7 @@ class BookForm extends React.Component {
           <div className='control'>
             <input
               className='input'
-              type='number'
+              type='text'
               onChange={this.handleChange}
               value={this.state.author}
               id='author'

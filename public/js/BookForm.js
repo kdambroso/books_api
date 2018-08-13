@@ -36,6 +36,7 @@ class BookForm extends React.Component {
 
   render () {
     console.log(this);
+    console.log(this.props)
     return (
       <div className='field'>
         <form onSubmit={this.handleSubmit}>
@@ -92,7 +93,7 @@ class BookForm extends React.Component {
             <input className='button is-primary' type='submit' />
           </div>
         </form>
-          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button>
+          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'bookAvailable')}>Cancel</button>
       </div>
     )
   }

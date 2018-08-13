@@ -1,5 +1,6 @@
 class BooksList extends React.Component {
   render (){
+    console.log(this.props)
     return (
       <table>
         <tbody>

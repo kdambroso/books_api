@@ -1,5 +1,4 @@
 class Book extends React.Component {
-
   render () {
     return (
       <div>

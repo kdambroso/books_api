@@ -92,7 +92,8 @@ class BookForm extends React.Component {
             <input className='button is-primary' type='submit' />
           </div>
         </form>
-          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button>
+        {!this.state.id ?
+          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button> :''}
       </div>
     )
   }

@@ -26,6 +26,7 @@ class Book extends React.Component {
           </div>
         </div>
         <BookForm book={this.props.book}   handleSubmit={this.props.handleSubmit}/>
+        <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'bookAvailable')}>Cancel</button>
       </div>
     )
   }

@@ -60,7 +60,7 @@ handleUpdateSubmit(book) {
     this.toggleState('booksAvailable',
      'bookAvailable')
   })
-  .catch(error => console.log(error))
+  // .catch(error => console.log(error))
 }
 
   deleteBook(book, index) {
@@ -79,13 +79,14 @@ handleUpdateSubmit(book) {
   }
 
   getBooks() {
-    fetch('/books')
+    fetch('/book')
       .then(response => response.json())
       .then(JSONdata => {
         this.setState({
           books: JSONdata
         })
-      }).catch(error => console.log(error))
+      })
+      // .catch(error => console.log(error))
   }
 
   getBook(book){

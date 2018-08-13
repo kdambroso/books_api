@@ -25,7 +25,7 @@ class Book extends React.Component {
           </div>
           </div>
         </div>
-        <BookForm book={this.props.book}   handleSubmit={this.props.handleSubmit}/>
+        {/* <BookForm book={this.props.book}   handleSubmit={this.props.handleSubmit}/> */}
       </div>
     )
   }

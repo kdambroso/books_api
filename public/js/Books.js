@@ -56,7 +56,6 @@ class Books extends React.Component {
           return updatedBook.json()
         })
         .then(jsonedBook => {
-          //need to update state be naughty, call that db!
           this.getBooks()
           this.toggleState('booksListAvailable', 'bookAvailable')
         })
@@ -101,7 +100,9 @@ class Books extends React.Component {
 
 
 
-  toggleState =(st1, st2) =>{
+  toggleState (st1, st2) {
+    console.log('toggleState function is running')
+    console.log(st1, st2)
     this.setState({
       [st1]: !this.state[st1],
       [st2]: !this.state[st2]
@@ -112,7 +113,6 @@ class Books extends React.Component {
   render () {
     return (
       <div className='books column'>
-        <h2> Books </h2>
         {this.state.booksListAvailable ? <button className='button is-success' onClick={()=>this.toggleState('addBookAvailable', 'booksListAvailable')}>Add a Book</button> :''}
         {
           this.state.booksListAvailable ?
@@ -124,11 +124,13 @@ class Books extends React.Component {
             /> : ''
         }
         {
-          this.state.addBookAvailable ?
+          this.state.bookAvailable ?
            <BookForm
+           test={'test'}
             toggleState={this.toggleState}
             handleCreate={this.handleCreate}
             handleSubmit={this.handleCreateSubmit}
+            test2={'test'}
            /> : ''
          }
          {

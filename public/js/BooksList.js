@@ -5,7 +5,6 @@ class BooksList extends React.Component {
         <tbody>
         {this.props.books.map((book, index) => {
           return (
-<<<<<<< HEAD
           <tr>
             <td  onClick={
               () => {
@@ -41,7 +40,6 @@ class BooksList extends React.Component {
             </td>
           </tr>
         )
-=======
             <tr>
               <td onClick={()=>
               { this.props.getBook(book); this.props.toggleState('booksListAvailable', 'bookAvailable')}
@@ -62,7 +60,6 @@ class BooksList extends React.Component {
               </td>
             </tr>
           )
->>>>>>> 87c3d4ee8cb0830675ba24ebc38bd235ca517661
         })}
         </tbody>
       </table>

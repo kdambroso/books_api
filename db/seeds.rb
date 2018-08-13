@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# CREATE TABLE books (id SERIAL, title TEXT, author TEXT, publisher TEXT, genre TEXT, image TEXT); 
+CREATE TABLE books (id SERIAL, title TEXT, author TEXT, publisher TEXT, genre TEXT, image TEXT); 
 
 
-# INSERT INTO books (title, author, publisher, genre, image) VALUES ('Lord of The Rings', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
+INSERT INTO books (title, author, publisher, genre, image) VALUES ('Lord of The Rings', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
 
-# INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Hobbit', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
+INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Hobbit', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
 
-# INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Silmarillion', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
+INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Silmarillion', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
 
 
 
@@ -27,4 +27,3 @@
     })
 end
 
-p

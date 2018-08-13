@@ -29,7 +29,8 @@ class BooksList extends React.Component {
             }}
             >
 
-              <button className='button is-warning is-small'>Edit</button>
+              <button className='button is-warning is-small'
+             onClick={() =>this.props.handleUpdateSubmit(book)} >Edit</button>
             </td>
             <td>
               <button className='button is-danger is-small'

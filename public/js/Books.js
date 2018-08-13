@@ -124,13 +124,13 @@ class Books extends React.Component {
             /> : ''
         }
         {
-          this.state.bookAvailable ?
+          this.state.addBookAvailable ?
            <BookForm
            test={'test'}
             toggleState={this.toggleState}
             handleCreate={this.handleCreate}
             handleSubmit={this.handleCreateSubmit}
-            test2={'test'}
+            test2={'test2'}
            /> : ''
          }
          {

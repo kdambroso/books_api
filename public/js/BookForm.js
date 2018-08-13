@@ -10,7 +10,7 @@ class BookForm extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.componentDidMount= this.componentDidMount.bind(this)
+
   }
 
   componentDidMount(){
@@ -93,7 +93,8 @@ class BookForm extends React.Component {
             <input className='button is-primary' type='submit' />
           </div>
         </form>
-          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'bookAvailable')}>Cancel</button>
+  {!this.state.id ?
+          <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button> :''}
       </div>
     )
   }

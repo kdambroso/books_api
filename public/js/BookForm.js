@@ -36,6 +36,7 @@ class BookForm extends React.Component {
 
   render () {
     console.log(this);
+    console.log(this.props)
     return (
       <div className='field'>
         <form onSubmit={this.handleSubmit}>

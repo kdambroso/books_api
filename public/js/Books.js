@@ -112,7 +112,7 @@ class Books extends React.Component {
   render () {
     return (
       <div className='books column'>
-        <h2> Books </h2>
+      
         {this.state.booksListAvailable ? <button className='button is-success' onClick={()=>this.toggleState('addBookAvailable', 'booksListAvailable')}>Add a Book</button> :''}
         {
           this.state.booksListAvailable ?

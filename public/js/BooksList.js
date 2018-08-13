@@ -1,11 +1,11 @@
 class BooksList extends React.Component {
-  render() {
-    console.log(this.props)
+  render (){
     return (
       <table>
         <tbody>
         {this.props.books.map((book, index) => {
           return (
+<<<<<<< HEAD
           <tr>
             <td  onClick={
               () => {
@@ -29,7 +29,8 @@ class BooksList extends React.Component {
             }}
             >
 
-              <button className='button is-warning is-small'>Edit</button>
+              <button className='button is-warning is-small'
+             onClick={() =>this.props.handleUpdateSubmit(book)} >Edit</button>
             </td>
             <td>
               <button className='button is-danger is-small'
@@ -40,6 +41,28 @@ class BooksList extends React.Component {
             </td>
           </tr>
         )
+=======
+            <tr>
+              <td onClick={()=>
+              { this.props.getBook(book); this.props.toggleState('booksListAvailable', 'bookAvailable')}
+              }>
+                <img src={book.image} alt={book.title} />
+              </td>
+              <td className='book' onClick={()=> { this.props.getBook(book); this.props.toggleState('booksListAvailable', 'bookAvailable')}}>
+                <h3> {book.title} </h3>
+              </td>
+              <td>
+                  <button className='button is-warning is-small'
+                  onClick={()=>
+                  { this.props.getBook(book); this.props.toggleState('booksListAvailable', 'bookAvailable')}}
+                  >Edit</button>
+              </td>
+              <td>
+                  <button className='button is-danger is-small' onClick={() => this.props.deleteBook(book, index)}>Delete</button>
+              </td>
+            </tr>
+          )
+>>>>>>> 87c3d4ee8cb0830675ba24ebc38bd235ca517661
         })}
         </tbody>
       </table>

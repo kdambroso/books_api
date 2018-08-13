@@ -26,3 +26,4 @@ INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Silmaril
         'genre' => "#{Faker::Book.genre}"
     })
 end
+

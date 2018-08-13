@@ -1,6 +1,6 @@
 class Book 
 
-    attr_reader :id, :title, :author, :publisher, :genre
+    attr_reader :id, :title, :author, :publisher, :genre, :image
 
     DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
 

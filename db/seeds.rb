@@ -14,6 +14,13 @@ INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Hobbit',
 
 INSERT INTO books (title, author, publisher, genre, image) VALUES ('The Silmarillion', 'J.R.R. Tolkien', 'Allen & Unwin', 'Ficton'); 
 
+CREATE TABLE users (id SERIAL, username VARCHAR(32), pass_word VARCHAR(32)); 
+
+INSERT INTO users (username, pass_word) VALUES ('PANDAboy21', 'EatChessE'); 
+INSERT INTO users (username, pass_word) VALUES ('PiZzAkIng', 'EatZZzzA'); 
+
+
+
 
 
 

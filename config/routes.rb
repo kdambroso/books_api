@@ -13,4 +13,10 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#delete'
   put '/users/:id', to: 'users#update'
 
+  get '/reviews', to: 'reviews#index'
+  get '/reviews/:id', to: 'reviews#show'
+  post '/reviews', to: 'reviews#create'
+  delete '/reviews/:id', to: 'reviews#delete'
+  put '/reviews/:id', to: 'reviews#update'
+
 end

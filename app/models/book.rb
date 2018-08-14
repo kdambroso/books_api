@@ -2,7 +2,14 @@ class Book
 
     attr_reader :id, :title, :author, :publisher, :genre, :image
 
-    DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+    # DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+
+    if(ENV['DATABASE_URL'])
+        uri = URI.parse(ENV['DATABASE_URL'])
+        DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+    else
+        DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+    end
 
 def self.all 
     result = DB.exec("SELECT * FROM books;")

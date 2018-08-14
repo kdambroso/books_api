@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/books/:id', to: 'books#show'
   post '/books', to: 'books#create'
   delete '/books/:id', to: 'books#delete'
-  put 'books/:id', to: 'books#update'
+  put '/books/:id', to: 'books#update'
 
 end

@@ -1,8 +1,15 @@
 class Book 
 
-    attr_reader :id, :title, :author, :publisher, :genre, :image
+    attr_reader :id, :title, :author, :publisher, :genre, :image, :summary
 
-    DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+    # DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+
+    if(ENV['DATABASE_URL'])
+        uri = URI.parse(ENV['DATABASE_URL'])
+        DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+    else
+        DB = PG.connect(host: "localhost", port: 5432, dbname: 'books_api_development')
+    end
 
 def self.all 
     result = DB.exec("SELECT * FROM books;")
@@ -13,7 +20,8 @@ def self.all
                 "author" => result["author"],
                 "publisher" => result["publisher"],
                 "genre" => result["genre"], 
-                "image" => result["image"]
+                "image" => result["image"], 
+                "summary" => result["summary"]
             }
         end 
     end 
@@ -26,16 +34,17 @@ def self.all
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
             "genre" => results.first["genre"], 
-            "image" => results.first["image"]
+            "image" => results.first["image"], 
+            "summary" => results.first["summary"]
         }
     end 
 
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO books (title, author, publisher, genre, image)
-                VALUES ( '#{opts["title"]}', '#{opts["author"]}', '#{opts["publisher"]}', '#{opts["genre"]}', '#{opts["image"]}' )
-                RETURNING id, title, author, publisher, genre, image;
+                INSERT INTO books (title, author, publisher, genre, image, summary)
+                VALUES ( '#{opts["title"]}', '#{opts["author"]}', '#{opts["publisher"]}', '#{opts["genre"]}', '#{opts["image"]}', '#{opts["summary"]}' )
+                RETURNING id, title, author, publisher, genre, image, summary;
             SQL
         )
         return {
@@ -44,7 +53,8 @@ def self.all
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
             "genre" => results.first["genre"], 
-            "image" => results.first["image"]
+            "image" => results.first["image"], 
+            "summary" => results.first["summary"]
 
         }
     end
@@ -58,9 +68,9 @@ def self.all
         results = DB.exec(
             <<-SQL
                 UPDATE books
-                SET title='#{opts["title"]}', author='#{opts["author"]}', publisher='#{opts["publisher"]}', genre='#{opts["genre"]}', image='#{opts["image"]}'
+                SET title='#{opts["title"]}', author='#{opts["author"]}', publisher='#{opts["publisher"]}', genre='#{opts["genre"]}', image='#{opts["image"]}', summary='#{opts["summary"]}'
                 WHERE id=#{id}
-                RETURNING id, title, author, publisher, genre, image;
+                RETURNING id, title, author, publisher, genre, image, summary;
             SQL
         )
         return {
@@ -69,7 +79,8 @@ def self.all
             "author" => results.first["author"],
             "publisher" => results.first["publisher"],
             "genre" => results.first["genre"], 
-            "image" => results.first["image"]
+            "image" => results.first["image"], 
+            "summary" => results.first["summary"]
         }
     end
 

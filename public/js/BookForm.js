@@ -6,7 +6,8 @@ class BookForm extends React.Component {
       author: '',
       genre: '',
       publisher: '',
-      image: ''
+      image: '', 
+      summary: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,6 +22,7 @@ class BookForm extends React.Component {
         genre: this.props.book.genre,
         publisher: this.props.book.publisher,
         image: this.props.book.image,
+        summary: this.props.book.summary, 
         id: this.props.book.id
       })
     }
@@ -87,6 +89,16 @@ class BookForm extends React.Component {
               id='image'
               onChange={this.handleChange}
               value={this.state.image}
+            />
+          </div>
+          <label className='label' for='summary'>Summary</label>
+          <div className='control'>
+            <input
+              className='input'
+              type='text'
+              onChange={this.handleChange}
+              value={this.state.summary}
+              id='summary'
             />
           </div>
           <div className='control'>

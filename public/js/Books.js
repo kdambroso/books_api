@@ -95,8 +95,7 @@ class Books extends React.Component {
         this.setState({
           books: data
         })
-      })
-      // .catch(error => console.log(error))
+      }).catch(error => console.log(error))
   }
 
 

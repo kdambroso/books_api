@@ -19,6 +19,10 @@ CREATE TABLE users (id SERIAL, username VARCHAR(32), pass_word VARCHAR(32));
 INSERT INTO users (username, pass_word) VALUES ('PANDAboy21', 'EatChessE'); 
 INSERT INTO users (username, pass_word) VALUES ('PiZzAkIng', 'EatZZzzA'); 
 
+CREATE TABLE reviews (id SERIAL, book_id INT, user_id INT, review_content TEXT); 
+
+INSERT INTO reviews (book_id, user_id, review_content) VALUES ('1', '1', 'This book is so good');
+
 
 
 

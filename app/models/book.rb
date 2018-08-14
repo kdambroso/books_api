@@ -12,7 +12,15 @@ class Book
     end
 
 def self.all 
-    result = DB.exec("SELECT * FROM books;")
+    result = DB.exec(
+            <<-SQL
+            SELECT 
+            * 
+            FROM books 
+            LEFT JOIN users 
+            ON books.user_id = users.id;
+            SQL
+            )
         return result.map do |result|
             {
                 "id" => result["id"].to_i,

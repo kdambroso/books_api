@@ -26,7 +26,7 @@ class Review
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO users (book_id, user_id, review_content)
+                INSERT INTO reviews (book_id, user_id, review_content)
                 VALUES ( '#{opts["book_id"]}', '#{opts["user_id"]}', '#{opts["review_content"]}' )
                 RETURNING id, book_id, user_id, review_content;
             SQL
@@ -48,7 +48,7 @@ class Review
         results = DB.exec(
             <<-SQL
                 UPDATE reviews
-                SET '#{opts["book_id"]}', '#{opts["user_id"]}', '#{opts["review_content"]}'
+                SET book_id='#{opts["book_id"]}', user_id='#{opts["user_id"]}', review_content='#{opts["review_content"]}'
                 WHERE id=#{id}
                 RETURNING id, book_id, user_id, review_content; 
             SQL

@@ -10,7 +10,8 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        render json: Review.create(params["Review"])
+       
+        render json: Review.create(params["review"])
     end
 
     def delete
@@ -18,6 +19,6 @@ class ReviewsController < ApplicationController
     end
 
     def update
-        render json: Review.update(params["id"], params["Review"])
+        render json: Review.update(params["id"], params["review"])
     end
 end 

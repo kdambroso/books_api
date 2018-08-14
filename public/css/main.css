@@ -1,0 +1,43 @@
+body{
+  background:  url('/css/639771896-612x612.jpg');
+  background-size: cover;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Tangerine', cursive;
+}
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title img {
+  width: 100px;
+  height: 100px;
+}
+.header-title h1 {
+  font-size: 3em;
+  font-weight: 800;
+  color: black;
+  margin-left: 10px;
+}
+.button.is-warning {
+  background: #D4AF37;
+  color: black;
+}
+.button.is-danger {
+  background: 	#982E42;
+  color:white;
+}
+.button.is-success, .button.is-primary {
+  background: #01552A;
+  color: white;
+}
+.button.is-link {
+  background: #373A63;
+  color: white;
+}
+
+.

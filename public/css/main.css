@@ -1,4 +1,4 @@
-body{
+html{
   background:  url('/css/tnsT8o.jpg');
   background-size: cover;
 }
@@ -38,6 +38,12 @@ body{
 .button.is-link {
   background: #373A63;
   color: white;
+}
+.header p{
+  display: inline-block;
+  color: black;
+  font-weight: 800;
+
 }
 
 .

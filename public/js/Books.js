@@ -6,6 +6,7 @@ class Books extends React.Component {
     addBookAvailable: false,
     bookAvailable: false,
     editBookAvailable: false,
+    bookShowAvailable: false,
     books : [],
     book: {}
     }
@@ -44,6 +45,7 @@ class Books extends React.Component {
     this.setState({books: [book, ...this.state.books]})
   }
   handleUpdateSubmit (book) {
+    console.log(book.id)
       fetch('/books/'+ book.id, {
         body: JSON.stringify(book),
         method: 'PUT',
@@ -96,13 +98,13 @@ class Books extends React.Component {
           books: data
         })
       })
-      // .catch(error => console.log(error))
+      .catch(error => console.log(error))
   }
 
 
 
   toggleState (st1, st2) {
-    console.log('toggleState function is running')
+    // console.log('toggleState function is running')
     console.log(st1, st2)
     this.setState({
       [st1]: !this.state[st1],
@@ -126,6 +128,14 @@ class Books extends React.Component {
             /> : ''
         }
         {
+          this.state.bookShowAvailable ?
+            <BookShow
+             toggleState={this.toggleState}
+             book={this.state.book}
+             getBook={this.getBook}
+            /> : ''
+        }
+        {
           this.state.addBookAvailable ?
            <BookForm
            test={'test'}
@@ -143,6 +153,7 @@ class Books extends React.Component {
      handleSubmit={this.handleUpdateSubmit}
     /> : ''
  }
+ <bookShow />
       </div>
     )
   }

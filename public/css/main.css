@@ -1,6 +1,6 @@
-html {
-  background:  url('/css/639771896-612x612.jpg');
-  background-size: title;
+html{
+  background:  url('/css/tnsT8o.jpg');
+  background-size: cover;
 }
 
 h3 {
@@ -88,6 +88,12 @@ table {
   background-color: black;
   border-radius: 30%;
   color: white;
+}
+.header p{
+  display: inline-block;
+  color: black;
+  font-weight: 800;
+
 }
 
 .button.is-link {

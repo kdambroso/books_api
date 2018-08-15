@@ -44,6 +44,7 @@ class Books extends React.Component {
     this.setState({books: [book, ...this.state.books]})
   }
   handleUpdateSubmit (book) {
+    console.log(book.id)
       fetch('/books/'+ book.id, {
         body: JSON.stringify(book),
         method: 'PUT',
@@ -102,7 +103,7 @@ class Books extends React.Component {
 
 
   toggleState (st1, st2) {
-    console.log('toggleState function is running')
+    // console.log('toggleState function is running')
     console.log(st1, st2)
     this.setState({
       [st1]: !this.state[st1],

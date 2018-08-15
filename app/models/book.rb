@@ -14,16 +14,23 @@ class Book
 def self.all 
     result = DB.exec(
             <<-SQL
-            SELECT 
-            * 
-            FROM books 
-            LEFT JOIN users 
+            SELECT
+            books.id AS books_id,
+            books.title,
+            books.author,
+            books.publisher,
+            books.image,
+            books.genre,
+            books.summary,
+            books.user_id
+            FROM books
+            LEFT JOIN users
             ON books.user_id = users.id;
             SQL
             )
         return result.map do |result|
             {
-                "id" => result["id"].to_i,
+                "id" => result["books_id"].to_i,
                 "title" => result["title"],
                 "author" => result["author"],
                 "publisher" => result["publisher"],

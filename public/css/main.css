@@ -1,6 +1,7 @@
 html{
   background:  url('/css/tnsT8o.jpg');
   background-size: cover;
+
  }
  
  h3 {
@@ -11,10 +12,12 @@ html{
  }
  
  tbody {
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+
  }
  
  td {
@@ -24,10 +27,12 @@ html{
  }
  
  table {
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   opacity: .9;
+
  }
  
  .tile {
@@ -46,6 +51,7 @@ html{
   font-family: ‘Tangerine’, cursive;
  }
  .header-title img {
+
   width: 100px;
   height: 100px;
  }
@@ -54,40 +60,49 @@ html{
   font-weight: 800;
   color: black;
   padding: 20px;
+
  }
  
  .button.is-warning {
+
   font-size: 15px;
   background-color: black;
   border-radius: 10%;
   color: white;
   margin: 10px;
   opacity: .7;
+
  }
  .button.is-danger {
+
   font-size: 15px;
   background-color: black;
   border-radius: 10%;
   color:white;
   margin: 10px;
   opacity: .7;
+
  }
  .button.is-success {
   font-size: 30px;
   font-family: ‘Tangerine’, italic;
+
   background-color: black;
   opacity: .7;
   border-radius: 75%;
   color: white;
   margin: 15px;
+
  }
  
  .button.is-primary {
   font-family: ‘Tangerine’, italic;
+
   font-size: 30px;
   background-color: black;
   border-radius: 30%;
   color: white;
+
  }
  .header {
   display: inline-block;
@@ -108,11 +123,13 @@ html{
   display: flex;
   justify-content: center;
   font-family: ‘Tangerine’, italic;
+
   font-size: 25px;
   font-weight: 800;
   color: black;
   opacity: 0.6;
   padding: 5px;
+
  }
  
  .input {
@@ -120,9 +137,12 @@ html{
   opacity: 0.6;
   }
  
+
   #container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+
   }

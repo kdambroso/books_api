@@ -6,7 +6,7 @@ class BookForm extends React.Component {
       author: '',
       genre: '',
       publisher: '',
-      image: '', 
+      image: '',
       summary: ''
     }
     this.handleChange = this.handleChange.bind(this)
@@ -22,7 +22,7 @@ class BookForm extends React.Component {
         genre: this.props.book.genre,
         publisher: this.props.book.publisher,
         image: this.props.book.image,
-        summary: this.props.book.summary, 
+        summary: this.props.book.summary,
         id: this.props.book.id
       })
     }
@@ -105,7 +105,7 @@ class BookForm extends React.Component {
             <input className='button is-primary' type='submit' />
           </div>
         </form>
-  {!this.state.id ?
+          {!this.state.id ?
           <button className="button is-link" onClick={()=> this.props.toggleState('booksListAvailable', 'addBookAvailable')}>Cancel</button> :''}
       </div>
     )

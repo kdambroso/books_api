@@ -1,142 +1,148 @@
 html{
   background:  url('/css/tnsT8o.jpg');
   background-size: cover;
-}
 
-h3 {
+ }
+ 
+ h3 {
   color: black;
   font-size: 25px;
   margin: 15px;
+ 
+ }
+ 
+ tbody {
 
-}
-
-tbody {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-}
 
-td {
+ }
+ 
+ td {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+ }
+ 
+ table {
 
-table {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   opacity: .9;
-}
 
-.tile {
+ }
+ 
+ .tile {
   display: flex;
-}
-
-.header {
+ }
+ 
+ .header {
   font-size: 30px;
   padding: 20px;
-}
-
-.header-title {
+ }
+ 
+ .header-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Tangerine', cursive;
-}
-.header-title img {
+  font-family: ‘Tangerine’, cursive;
+ }
+ .header-title img {
+
   width: 100px;
   height: 100px;
-}
-.header-title h1 {
+ }
+ .header-title h1 {
   font-size: 3em;
   font-weight: 800;
   color: black;
   padding: 20px;
-}
 
-.button.is-warning {
+ }
+ 
+ .button.is-warning {
+
   font-size: 15px;
   background-color: black;
   border-radius: 10%;
   color: white;
   margin: 10px;
   opacity: .7;
-}
-.button.is-danger {
+
+ }
+ .button.is-danger {
+
   font-size: 15px;
   background-color: black;
   border-radius: 10%;
   color:white;
   margin: 10px;
   opacity: .7;
-}
-.button.is-success {
+
+ }
+ .button.is-success {
   font-size: 30px;
-  font-family: 'Tangerine', italic;
+  font-family: ‘Tangerine’, italic;
+
   background-color: black;
   opacity: .7;
   border-radius: 75%;
   color: white;
   margin: 15px;
-}
 
-.button.is-primary {
-  font-family: 'Tangerine', italic;
+ }
+ 
+ .button.is-primary {
+  font-family: ‘Tangerine’, italic;
+
   font-size: 30px;
   background-color: black;
   border-radius: 30%;
   color: white;
-}
-.header p{
+
+ }
+ .header {
   display: inline-block;
   color: black;
   font-weight: 800;
-
-}
-
-.button.is-link {
-font-family: 'Tangerine', italic;
-font-size: 30px;
-background: #01552A;
-border-radius: 30%;
-color: white;
-margin: 20px;
-}
-
-/* .field {
-  align-content: center;
-  justify-content: center;
-  border-radius: 10%;
-} */
-
-.label {
+ }
+ 
+ .button.is-link {
+ font-family: ‘Tangerine’, italic;
+ font-size: 30px;
+ background: #01552A;
+ border-radius: 30%;
+ color: white;
+ margin: 20px;
+ }
+ 
+ .label {
   display: flex;
   justify-content: center;
-  font-family: 'Tangerine', italic;
+  font-family: ‘Tangerine’, italic;
+
   font-size: 25px;
   font-weight: 800;
   color: black;
   opacity: 0.6;
   padding: 5px;
-}
 
-.input {
+ }
+ 
+ .input {
   background-color: lightgray;
   opacity: 0.6;
   }
-
-  /* .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  } */
+ 
 
   #container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* opacity: .7; */
+
+
   }

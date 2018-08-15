@@ -1,5 +1,5 @@
-body{
-  background:  url('/css/639771896-612x612.jpg');
+html{
+  background:  url('/css/tnsT8o.jpg');
   background-size: cover;
 }
 .header {
@@ -38,6 +38,12 @@ body{
 .button.is-link {
   background: #373A63;
   color: white;
+}
+.header p{
+  display: inline-block;
+  color: black;
+  font-weight: 800;
+
 }
 
 .

@@ -6,7 +6,6 @@ class Books extends React.Component {
     addBookAvailable: false,
     bookAvailable: false,
     editBookAvailable: false,
-    bookShowAvailable: false,
     books : [],
     book: {}
     }
@@ -97,8 +96,7 @@ class Books extends React.Component {
         this.setState({
           books: data
         })
-      })
-      .catch(error => console.log(error))
+      }).catch(error => console.log(error))
   }
 
 
@@ -128,14 +126,6 @@ class Books extends React.Component {
             /> : ''
         }
         {
-          this.state.bookShowAvailable ?
-            <BookShow
-             toggleState={this.toggleState}
-             book={this.state.book}
-             getBook={this.getBook}
-            /> : ''
-        }
-        {
           this.state.addBookAvailable ?
            <BookForm
            test={'test'}
@@ -153,7 +143,6 @@ class Books extends React.Component {
      handleSubmit={this.handleUpdateSubmit}
     /> : ''
  }
- <bookShow />
       </div>
     )
   }

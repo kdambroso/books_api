@@ -1,5 +1,6 @@
 class BooksList extends React.Component {
   render (){
+    console.log(this.props)
     return (
       <table>
         <tbody>
@@ -7,7 +8,7 @@ class BooksList extends React.Component {
           return (
             <tr>
               <td onClick={()=>
-              { this.props.getBook(book); this.props.toggleState('bookShowAvailable', 'booksListAvailable')}
+              { this.props.getBook(book); this.props.toggleState('booksListAvailable', 'bookAvailable')}
               }>
                 <img src={book.image} alt={book.title} />
               </td>

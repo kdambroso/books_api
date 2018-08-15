@@ -43,7 +43,7 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: ‘Tangerine’, cursive;
+  font-family: 'Tangerine', cursive;
  }
  .header-title img {
   width: 100px;
@@ -74,7 +74,7 @@ html{
  }
  .button.is-success {
   font-size: 30px;
-  font-family: ‘Tangerine’, italic;
+  font-family: 'Tangerine', italic;
   background-color: black;
   opacity: .7;
   border-radius: 75%;
@@ -83,7 +83,7 @@ html{
  }
  
  .button.is-primary {
-  font-family: ‘Tangerine’, italic;
+  font-family: 'Tangerine', italic;
   font-size: 30px;
   background-color: black;
   border-radius: 30%;
@@ -96,7 +96,7 @@ html{
  }
  
  .button.is-link {
- font-family: ‘Tangerine’, italic;
+ font-family: 'Tangerine', italic;
  font-size: 30px;
  background: #01552A;
  border-radius: 30%;
@@ -107,7 +107,7 @@ html{
  .label {
   display: flex;
   justify-content: center;
-  font-family: ‘Tangerine’, italic;
+  font-family: 'Tangerine', italic;
   font-size: 25px;
   font-weight: 800;
   color: black;

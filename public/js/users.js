@@ -42,10 +42,10 @@ class UserForm extends React.Component {
             />
           </div>
           <div >
-            <input type='submit' />
+            <input className='button is-danger is-small' type='submit' />
           </div>
         </form>
-          <button  onClick={()=> this.props.toggleState('usersListIsVisible', 'addUserIsVisible')}>Cancel</button>
+          <button className='button is-danger is-small'  onClick={()=> this.props.toggleState('usersListIsVisible', 'addUserIsVisible')}>Cancel</button>
       </div>
     )
   }
@@ -87,7 +87,7 @@ class UsersList extends React.Component {
                 <h3> {user.username} </h3>
               </li>
               <li>
-                  <button  onClick={() => this.props.deleteUser(user, index)}>Delete</button>
+                  <button className='button is-danger is-small'  onClick={() => this.props.deleteUser(user, index)}>Delete</button>
               </li>
             </ul>
           )

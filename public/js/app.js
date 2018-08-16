@@ -13,6 +13,26 @@ class Header extends React.Component {
     }
   }
 
+  class Footer extends React.Component {
+      render () {
+        return (
+
+
+          <footer>
+          <a href="https://novel12.com/the-fellowship-of-the-ring/book-i-prologue-128520.htm">
+          <img src="/css/Screen Shot 2018-08-12 at 1.24.45 PM.png"  /></a>
+            <div id="footBlack">
+              <div id="creators">
+                Created by Austin Harris, Kellie Dambroso, and Jon Bonnet
+              </div>
+              </div>
+            </footer>
+          
+        )
+      }
+    }
+
+
 class App extends React.Component {
     render () {
       return (
@@ -22,7 +42,9 @@ class App extends React.Component {
           <div >
 
           <Books />
+
           </div>
+  <Footer />
           </div>
       )
     }

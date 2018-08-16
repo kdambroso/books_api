@@ -49,7 +49,7 @@ class BookForm extends React.Component {
               type='text'
               id='title'
               onChange={this.handleChange}
-              value={this.state.title}
+              value= {this.state.title}
             />
           </div>
           <label className='label' for='author'>Author</label>
@@ -58,7 +58,7 @@ class BookForm extends React.Component {
               className='input'
               type='text'
               onChange={this.handleChange}
-              value={this.state.author}
+              value= {this.state.author}
               id='author'
             />
           </div>
@@ -68,7 +68,7 @@ class BookForm extends React.Component {
               type='text'
               id='genre'
               onChange={this.handleChange}
-              value={this.state.genre}
+              value= {this.state.genre}
             />
           </div>
           <label className='label' for='publisher'>Publisher</label>
@@ -78,7 +78,7 @@ class BookForm extends React.Component {
               type='text'
               id='publisher'
               onChange={this.handleChange}
-              value={this.state.publisher}
+              value= {this.state.publisher}
             />
           </div>
           <label className='label 'for='image'>Image</label>
@@ -88,16 +88,16 @@ class BookForm extends React.Component {
               type='text'
               id='image'
               onChange={this.handleChange}
-              value={this.state.image}
+              value= {this.state.image}
             />
           </div>
           <label className='label' for='summary'>Summary</label>
           <div className='control'>
-            <input
+            <textarea
               className='input'
               type='text'
               onChange={this.handleChange}
-              value={this.state.summary}
+              value= {this.state.summary}
               id='summary'
             />
           </div>

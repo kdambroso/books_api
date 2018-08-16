@@ -83,8 +83,9 @@ class UsersList extends React.Component {
         {this.props.users.map((user, index) => {
           return (
             <ul>
-              <li  onClick={()=> { this.props.getUser(user); this.props.toggleState('usersListIsVisible', 'userIsVisible')}}>
-                <h3> {user.username} </h3>
+              <li>
+              {user.username ?
+                <h3>Welcome {user.username} </h3>: ''}
               </li>
               <li>
                   <button className='button is-danger is-small'  onClick={() => this.props.deleteUser(user, index)}>Delete</button>
